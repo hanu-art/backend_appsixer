@@ -7,6 +7,8 @@ import contactRouter from './routes/contact.routes.js';
 import statusRouter from './routes/status.routes.js';
 import counterRouter from './routes/counter.routes.js'; 
 import jobDivaRouter from './routes/jobDiva.routes.js';
+import AnalyticRouter from './routes/contactAnalytics.routes.js';
+
 const app = express();
 
 app.use(
@@ -33,6 +35,6 @@ app.use('/api/auth', authRouter);
 app.use('/api', contactRouter);
 app.use('/api', statusRouter); 
 app.use("/api" , counterRouter)
-app.use("/api" , jobDivaRouter)
+app.use("/api" , AnalyticRouter)
 app.use(errorMiddleware);
 export default app;
