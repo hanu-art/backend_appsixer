@@ -90,7 +90,6 @@ const login = async (req, res, next) => {
 const logout = async (req, res, next) => {
   try {
 
-    console.log(req)
     res.clearCookie('token', {
       httpOnly: true,
       secure:false,
