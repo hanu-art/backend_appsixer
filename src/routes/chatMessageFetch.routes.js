@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import authMiddleware from '../middleware/auth.middleware.js';
+//import authMiddleware from '../middleware/auth.middleware.js';
 import { fetchConversationMessages } from '../controllers/chatMessageFetch.controller.js';
 
 const router = Router();
@@ -9,7 +9,7 @@ const router = Router();
  */
 router.get(
   '/conversation/:conversationId/messages',
-  authMiddleware,
+ // authMiddleware,
   fetchConversationMessages
 );
 
