@@ -65,12 +65,12 @@ const login = async (req, res, next) => {
 
     res.cookie('token', token, {
       httpOnly: true,
-      secure: false,
-      sameSite: 'lax',
+     secure: true,
+  sameSite: 'none',
       maxAge,
       path: '/',
     });
-
+     console.log("login api")
     return successResponse(res, {
       statusCode: 200,
       message: 'Logged in successfully',
